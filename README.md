@@ -13,8 +13,18 @@ Due to Discovery message being sent out, any other instance of this application
 running on the same network will reach the message and can connect to this
 instance as a Peer via TCP for a persistent connection.
 
+## Usage
+Just start instances of this server (`go run main.go`) on multiple machines /
+containers on the same network.
+
+Servers would log Discovery of other instances and initiate a short living TCP
+connections to prove connectability.
+
 ## TODO: Add Gossip
 Currently there is only Broadcast and Discovery of instances running in the same
 network.
 
 Gossip needs to happen to allow instances to share info to one another.
+
+## References
+- https://en.wikipedia.org/wiki/Broadcasting_(networking)
